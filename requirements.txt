@@ -68,7 +68,6 @@ django-treebeard==4.3.1
 django-versatileimagefield==2.0
 djangorestframework==3.9.1
 docutils==0.15.2
-draftjs-exporter==2.1.7
 get==2019.4.13
 graphene==2.1.8
 graphene-django==2.11.0
