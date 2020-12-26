@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Article
-from django.views.generic import ListView, CreateView, DetailView
+from django.views.generic import ListView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
@@ -45,7 +45,3 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-
-
-class ArticleDetailView(DetailView):
-    model = Article
