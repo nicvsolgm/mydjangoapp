@@ -70,7 +70,6 @@ djangorestframework==3.9.1
 docutils==0.15.2
 draftjs-exporter==2.1.7
 enmerkar==0.7.1
-entrypoints==0.3
 get==2019.4.13
 graphene==2.1.8
 graphene-django==2.11.0
