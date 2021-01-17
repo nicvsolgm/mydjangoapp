@@ -38,7 +38,8 @@ urlpatterns = [
          ),
          name='password_reset_complete'),
     path('blog/', include('blog.urls')),
-    path('', include('article.urls'))
+    path('', include('article.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 

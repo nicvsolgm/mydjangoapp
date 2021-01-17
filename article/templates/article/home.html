@@ -25,7 +25,7 @@
             >posted by:{{ article.author }}<br />
             {{article.a_date_posted|date:"F d, Y" }}
           </small>
-          <p class="card-text">{{ article.a_content }}</p>
+          <p class="card-text">{{ article.a_content|safe }}</p>
           <a href="#" class="btn btn-primary">more news!!..</a>
         </div>
       </div>
