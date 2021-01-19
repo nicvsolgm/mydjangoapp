@@ -39,14 +39,15 @@ class UserPostListView(ListView):
         return Post.objects.filter(author=user).order_by('-date_posted')
 
 
-class PostDetailView(DetailView):
+class PostDetailView(LoginRequiredMixin, DetailView):
     model = Post
     template_name = 'blog/post_detail.html'
     context_object_name = 'post'
 
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
-        comments_connected = Comment.objects.filter(post_connected=self.get_object()).order_by('-date_posted')
+        comments_connected = Comment.objects.filter(
+            post_connected=self.get_object()).order_by('-date_posted')
         data['comments'] = comments_connected
         data['form'] = NewCommentForm(instance=self.request.user)
         return data
