@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Article
+from ckeditor.fields import RichTextField
 from django.views.generic import ListView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 

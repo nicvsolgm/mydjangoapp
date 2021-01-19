@@ -129,7 +129,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-CKEDITOR_BASEPATH = "/staticfiles/ckeditor/ckeditor/"
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "/media/"
 
 CKEDITOR_CONFIGS = {
