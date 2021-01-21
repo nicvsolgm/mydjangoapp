@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
-<head>
+  <html>
+    <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -51,50 +51,56 @@
     <br>
     <br>
   <div class="container">
-  <!--<main role="main" class="container">-->
-    <div class="row alert alert-info">
-        <div class="col-md-8">
+      <div class="row alert alert-info">
+           <div class="col-md-8">
             {% if messages %}
-            {% for message in messages %}
-          <div class = 'alert alert-{{ message.tags }}'>
-              {{ message }}
-          </div>
-            {% endfor%}
-            {% endif %}
-        
-{% block content %}
+              {% for message in messages %}
+                <div class = 'alert alert-{{ message.tags }}'>
+                {{ message }}
+               {% endfor %}
+               {% endif %}
+                    <div class="container">
+               {% block content %}
+               {% endblock content %}
+                    </div>
+                </div>
+                   <div class="col-md-4 ml-auto mr-auto">
+                       <div class="content-section">
+                            <h5 class="text-center">Announcements</h5>
+                            <p class='text-muted'>Activities and Updates
+                            <ul class="list-group">
+                               <li class="list-group-item list-group-item-light">No activities</li>
+                               <li class="list-group-item list-group-item-light">No Updates</li>
+                               <li class="list-group-item list-group-item-light">Calendars</li>
+                               <li class="list-group-item list-group-item-light">etc</li>
+                           </ul>
+                        </p>
 
-{% endblock %}
-    </div>
-          <div class="col-md-4 ml-auto mr-auto">
-            <div class="content-section">
-              <h5 class="text-center">Announcements</h5>
-              <p class='text-muted'>Activities and Updates 
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-light">No activities</li>
-                <li class="list-group-item list-group-item-light">No Updates</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">etc</li>
-              </ul>
-            </p>
-            <div class="container">
-                <div><strong>CSIPDI</strong> in an Organization working for Peace, Development and Social Transformation </div>
-                <div>It adheres to the International standards and principle of Humanitarianism </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row alert alert-danger">Latest Activities</div>
-            <div class="row alert alert-info">Social Network</div>
-            <div class="row alert alert-secondary">asasdf</div>
-            <div class="row alert alert-primary">aasdf</div>
-            <div class="row alert alert-danger">asasdf</div>
-          </div>
+                   <div class="container">
+                       <div><strong>CSIPDI</strong> in an Organization working for Peace, Development and Social Transformation </div>
+                       <div>It adheres to the International standards and principle of Humanitarianism </div>
+                 </div>
+               </div>
+
+                  <div class="container">
+                         <div class="row alert alert-danger">Latest Activities</div>
+                         <div class="row alert alert-info">Social Network</div>
+                         <div class="row alert alert-secondary">asasdf</div>
+                         <div class="row alert alert-primary">aasdf</div>
+                         <div class="row alert alert-danger">asasdf</div>
+                  </div>
         </div>
-    </div>
-  <div class='container alert alert-info'>
+
+           </div>
+  <div class="row alert alert-danger">
     <div class="footer">© 2020 Copyright:  a6_coder, Bacolod City Philippines..
     </div>
   </div>
+          <div class="row alert alert-info">
+    <div class="footer">© 2020 Copyright:  a6_coder, Bacolod City Philippines..
+    </div>
+  </div>
+
 
 <script src="{% static 'js/jquery.min.js' %}" ></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>   
