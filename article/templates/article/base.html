@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <!---  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">-->
     <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
     {% if title %}
@@ -51,22 +52,25 @@
     </header>
     <br>
     <br>
-  <div class="container">
-      <div class="row alert alert-info">
-           <div class="col-md-8">
+
+
+<div class="container">
+    <div class="row alert alert-info">
+        <div class="col-md-8">
             {% if messages %}
-              {% for message in messages %}
-                <div class = 'alert alert-{{ message.tags }}'>
-                {{ message }}
-               {% endfor %}
-               {% endif %}
-                    <div class="container">
+            {% for message in messages %}
+            <div class = 'alert alert-{{ message.tags }}'>
+            {{ message }}
+            {% endfor %}
+            {% endif %}
+            
+               <div class="container">
                {% block content %}
                {% endblock content %}
-                    </div>
-                </div>
-                   <div class="col-md-4 ml-auto mr-auto">
-                       <div class="content-section">
+               </div>
+            </div>
+                    <div class="col-md-4 ml-auto mr-auto">
+                        <div class="content-section">
                             <h5 class="text-center">Announcements</h5>
                             <p class='text-muted'>Activities and Updates
                             <ul class="list-group">
@@ -75,32 +79,39 @@
                                <li class="list-group-item list-group-item-light">Calendars</li>
                                <li class="list-group-item list-group-item-light">etc</li>
                            </ul>
-                        </p>
+                           </p>
 
-                   <div class="container">
-                       <div><strong>CSIPDI</strong> in an Organization working for Peace, Development and Social Transformation </div>
-                       <div>It adheres to the International standards and principle of Humanitarianism </div>
-                 </div>
-               </div>
+                           <div class="container">
+                               <div><strong>CSIPDI</strong> in an Organization working for Peace, Development and Social Transformation </div>
+                               <div>It adheres to the International standards and principle of Humanitarianism </div>
+                            </div>
+                           </div>
 
-                  <div class="container">
-                         <div class="row alert alert-danger">Latest Activities</div>
-                         <div class="row alert alert-info">Social Network</div>
-                         <div class="row alert alert-secondary">asasdf</div>
-                         <div class="row alert alert-primary">aasdf</div>
-                         <div class="row alert alert-danger">asasdf</div>
-                  </div>
-        </div>
+                          <div class="container">
+                             <div class="row alert alert-info">Social Network</div>
+                                 <div class="row alert alert-secondary">
+                                     <div class="row ">
+                                        <div class="col-md-4 d-flex mr-5">
+                                        <div><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+                                        <div><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+                                        <div><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <div class="row alert alert-danger">
+                             <div class="footer">© 2020 Copyright:  a6_coder, Bacolod City Philippines..
+                             </div>
+                           </div>
 
-           </div>
-  <div class="row alert alert-danger">
-    <div class="footer">© 2020 Copyright:  a6_coder, Bacolod City Philippines..
-    </div>
-  </div>
-          <div class="row alert alert-info">
-    <div class="footer">© 2020 Copyright:  a6_coder, Bacolod City Philippines..
-    </div>
-  </div>
+                          <div class="row alert alert-info">
+                             <div class="footer">© 2020 Copyright:  a6_coder, Bacolod City Philippines..
+                             </div>
+                          </div>
+                          </div>
+                          </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
