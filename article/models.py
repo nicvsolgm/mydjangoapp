@@ -7,15 +7,12 @@ from django.urls import reverse
 from PIL import Image
 
 
-
-
-
 class Article(models.Model):
     a_title = models.CharField(max_length=100)
-    a_content = RichTextField(blank=True, null =True)
+    a_content = RichTextField(blank=True, null=True)
     a_date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    a_image = models.ImageField(default='default.jpg',upload_to='profile_pics')
+    #a_image = models.ImageField(default='default.jpg',upload_to='profile_pics')
 
     def __str__(self):
         return self.a_title
@@ -24,4 +21,4 @@ class Article(models.Model):
         return reverse("article-home")
 
     def save(self, *args, **kwargs):
-       super().save(*args, **kwargs)
+        super().save(*args, **kwargs)
