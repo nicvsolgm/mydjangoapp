@@ -41,7 +41,7 @@ class ArticleListView(ListView):
 
 class ArticleCreateView(LoginRequiredMixin, CreateView):
     model = Article
-    fields = ['a_title', 'a_content', 'a_image']
+    fields = ['a_title', 'a_content']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
