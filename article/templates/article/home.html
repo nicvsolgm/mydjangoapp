@@ -1,41 +1,66 @@
 {% extends "article/base.html" %}
-<!DOCTYPE html>
 
-  {% block content %}
+
+{% block content %}
+<section>
 <div class="container">
-  <div class="row alert alert-info">
-    <div class="col-md-12">
-      {% for article in articles %}
-      <h3 class="text-center">Press Release</h3>
+       <div class="row alert alert-info">
+           <div class="row alert alert-danger">
+               <center><h3>P R E S S  <br />  R E L E A S E</h3></center>
+           </div>
 
-      <div class="row">
-        <div class="col-md-12">
-    <!---     <img
-            class="card-img-top"
-            src="{{ article.a_image.url }}"
-            alt="Card image cap"
-          />-->
-          <div class="card-body">
-            <h5 class="card-title text-center">{{ article.a_title }}</h5>
-            <small
-              >posted by:{{ article.author }}<br />
-              {{article.a_date_posted|date:"F d, Y" }}
-            </small>
-            <p class="card-text">{{ article.a_content|safe }}</p>
-            <a href="#" class="btn btn-primary">more news!!..</a>
+            <div class="col-md-12">
+                {% for article in articles %}
+                   <div class="card-body">
+                        <h5 class="card-title text-center">{{ article.a_title }}</h5>
+                        <small>posted by:{{ article.author }}<br />
+                                         {{article.a_date_posted|date:"F d, Y" }}
+                        </small>
+                   </div>
+                   <div>
+                        <p class="card-text">{{ article.a_content|safe }}</p>
+                        <a href="#" class="btn btn-primary">more news!!..</a>
+                   </div>
+            </div>
+             {% endfor %}
+       </div>
+       <div class="row alert alert-danger">
+           <div class="col-md-12">
+               asdasdf
+           </div>
+       </div>
+
+       <div class="row alert alert-primary">
+           <div class="col-md-12">
+               asdasdf
+           </div>
+       </div>
+       <div class="row alert alert-secondary">
+           <div class="col-md-12">
+               asdasdf
+           </div>
+       </div>
+    <div class="row alert alert-secondary">
+           <div class="col-md-12">
+               asdasdf
+           </div>
+       </div>
+
+</div>
+</section>
+{% endblock content %}
+
+ {% block section %}
+      <div class="container ">
+          <div class="row alert alert-info">
+              adfasdf asdsad asdf
           </div>
-        </div>
       </div>
-      {% endfor %}
-    </div>
-  </div>
+      <div class="container">
+          <div class="row alert alert-info">
+              adfasdf asdsad asdf
+          </div>
+      </div>
+{% endblock section %}
 
-  <div class="row alert alert-danger">asdf asdf afd</div>
-  <div class="row alert alert-danger">asdf asdf afd</div>
-</div>
-  {% endblock content %}
-</div>
 
-<div class="container">
-  <div class="row">asdf</div>
-</div>
