@@ -10,7 +10,7 @@ urlpatterns = [
     #path('', views.home, name='article-home'),
     path('', ArticleListView.as_view(), name='article-home'),
     path('article/new/', ArticleCreateView.as_view(), name='article-create'),
-
+    path('article/contact/', views.contact, name='contact-form'),
 ]
 
 if settings.DEBUG:

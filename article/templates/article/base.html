@@ -33,7 +33,7 @@
              <div class="navbar-nav mr-auto">
                <a class="nav-item nav-link" href="{% url 'article-home' %}">Home</a>
                <a class="nav-item nav-link" href="{% url 'post-list' %}">Blog</a>
-               <a class="nav-item nav-link" href="#">Contacts</a>
+               <a class="nav-item nav-link" href="{% url 'contact-form' %}">Contacts</a>
              </div>
              <div class="navbar-nav">
              {% if user.is_authenticated %}

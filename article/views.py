@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Article
 from ckeditor.fields import RichTextField
 from django.views.generic import ListView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from .forms import ContactForm
 
 #from . import forms
 # Create your views here.
@@ -46,3 +46,16 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+def contact(request):
+
+    form = ContactForm()
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect("/")
+    else:
+        form = ContactForm()
+    return render(request, 'article/contact.html', {'form': form})
